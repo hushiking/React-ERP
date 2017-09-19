@@ -1,0 +1,45 @@
+{
+    "name": "react-erp",
+    "version": "1.0.0",
+    "description": "ERP example",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "set NODE_ENV=dev&&webpack-dev-server --config webpack.develop.config.js --devtool eval --progress --colors --hot --content-base app",
+        "build": "set NODE_ENV=production&&webpack --config webpack.publish.config.js --progress --colors"
+    },
+    "author": "hushiking",
+    "license": "ISC",
+    "devDependencies": {
+        "babel-core": "^6.22.1",
+        "babel-eslint": "^7.1.1",
+        "babel-loader": "^7.1.2",
+        "babel-plugin-import": "^1.2.1",
+        "babel-plugin-transform-runtime": "^6.23.0",
+        "babel-preset-env": "^1.6.0",
+        "babel-preset-react": "^6.22.0",
+        "babel-preset-stage-0": "^6.24.1",
+        "clean-webpack-plugin": "^0.1.15",
+        "css-loader": "^0.26.1",
+        "eslint": "^3.15.0",
+        "eslint-loader": "^1.6.1",
+        "extract-text-webpack-plugin": "^3.0.0",
+        "file-loader": "^0.10.0",
+        "html-webpack-plugin": "^2.28.0",
+        "open-browser-webpack-plugin": "0.0.3",
+        "react-addons-css-transition-group": "^15.4.2",
+        "style-loader": "^0.13.1",
+        "url-loader": "^0.5.7",
+        "webpack": "3.1.0",
+        "webpack-dev-server": "^2.3.0"
+    },
+    "dependencies": {
+        "antd": "^2.12.0",
+        "babel-runtime": "^6.26.0",
+        "jquery": "^3.2.1",
+        "moment": "^2.18.1",
+        "react": "^15.4.2",
+        "react-dom": "^15.4.2",
+        "react-router": "^3.0.2"
+    }
+}

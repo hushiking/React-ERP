@@ -1,0 +1,75 @@
+.header {
+    background: white;
+    padding: 0;
+    height: 52px;
+}
+
+.header span {
+    float: left;
+    height: 100%;
+    width: 250px;
+    background: #eb6c4b;
+    color: white;
+    font: 16px '微软雅黑';
+    text-align: center;
+    line-height: 52px;
+}
+/* .header span  i {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 10px;
+    background: '../images/'
+} */
+.ant-menu-vertical .ant-menu-item,
+.ant-menu-inline .ant-menu-item,
+.ant-menu-vertical .ant-menu-submenu-title,
+.ant-menu-inline .ant-menu-submenu-title {
+  padding: 0 16px;
+  font-size: 14px;
+  line-height: 42px;
+  height: 42px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ant-menu.ant-menu-dark .ant-menu-item-selected {
+  background-color: #ececec;
+
+}
+.ant-menu-dark .ant-menu-item-selected > a, .ant-menu-dark .ant-menu-item-selected > a:hover{
+      color: #c3a279
+}
+.ant-menu-dark .ant-menu-inline.ant-menu-sub{
+    background: #333;
+}
+.ant-layout-sider-zero-width-trigger {
+    position: absolute;
+    left: 180px;
+    top: -46px;
+    text-align: center;
+    width: 36px;
+    height: 42px;
+    line-height: 42px;
+     background: #eb6c4b; 
+    color: #fff;
+    font-size: 18px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background .3s ease;
+}
+
+.ant-layout-sider-zero-width-trigger:hover, .ant-layout-sider-zero-width-trigger:focus, .ant-layout-sider-zero-width-trigger:active, .ant-layout-sider-zero-width-trigger.active{
+     position: absolute;
+    left: 180px;
+    top: -46px;
+    text-align: center;
+    width: 36px;
+    height: 42px;
+    line-height: 42px;
+     background: #eb6c4b; 
+    color: #fff;
+    font-size: 18px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background .3s ease;
+}

@@ -1,0 +1,133 @@
+.loginContainer{
+    width: 100%;
+    height: 100%;
+    background: url('../images/login_bg.png');
+    background-size: 80% 100%; 
+    overflow: hidden;
+}
+.loginContent{
+   width: 880px;
+   height: 449px;
+    background: url('../images/rocket.png');
+    background-size: 100% 100%; 
+    margin: 0 auto;
+    position: relative;
+    margin-top: 18%;
+}
+.loginTitle{
+   font: 700 20px  '微软雅黑';
+    color: #de6734;
+    position: absolute;
+    height: 48px;
+    line-height: 48px;
+    top: 95px;
+    left: 57%;
+}
+.loginText{
+    font: 16px '微软雅黑';
+    color: #666;
+    position: absolute;
+    height: 48px;
+    line-height: 48px;
+    top: 156px;
+    left: 57%;
+}
+.loginaccount{
+    border-bottom: 1px solid #e6e6e6;
+    width: 27%;
+    height: 36px;
+    position: absolute;
+    height: 30px;
+    font: 14px '微软雅黑';
+    color: #666;
+    line-height: 38px;
+    top: 214px;
+    left: 56%;
+    padding-left: 45px;
+}
+.loginTitle::before{
+    width: 14px;
+    height: 16px;
+    content: '';
+    position: absolute;
+    background: url(../images/account.png);
+    background-size: 100% 100%;
+    left: 5px;
+    top: 126px;
+    z-index: 100;
+}
+.loginPassword{
+    border-bottom: 1px solid #e6e6e6;
+    width: 27%;
+    height: 36px;
+    position: absolute;
+    height: 30px;
+    font: 14px '微软雅黑';
+    color: #666;
+    line-height: 38px;
+    top: 268px;
+    left: 56%;
+    padding-left: 45px;
+}
+.loginTitle::after{
+    width: 14px;
+    height: 16px;
+    content: '';
+    position: absolute;
+    background: url(../images/covert.png);
+    background-size: 100% 100%;
+    left: 6px;
+    top: 180px;
+    z-index: 100;
+}
+.loginBtn{
+    width: 124px;
+    height: 48px;
+    background: #de6734;
+    font: 14px '微软雅黑';
+    color: #fff;
+    text-align: center;
+    line-height: 48px;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all .2s;
+    position: absolute;
+    top: 330px;
+    left: 57%;
+}
+.loginBtn:hover{
+     background: #cd4921;
+}
+.getCovert{
+    position: absolute;
+    width: 92px;
+    height: 32px;
+    background: #ecb742;
+    text-align: center;
+    top: 260px;
+    right: 105px;
+    font: 14px '微软雅黑';
+    color: #fff;
+    border-radius: 32px;
+    cursor: pointer;
+    line-height: 32px;
+    transition: all .2s;
+}
+.getCovert:hover{
+    background: #dd8e31;
+}
+.testHint{
+    width: 157px;
+    height: 48px;
+    /* background: #de6734; */
+    font: 14px '微软雅黑';
+    color: #de6734;
+    text-align: center;
+    line-height: 48px;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all .2s;
+    position: absolute;
+    top: 330px;
+    left: 72%;
+}

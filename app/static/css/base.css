@@ -1,0 +1,109 @@
+/*create by hushiking 2017/06/12*/
+/*@charset "utf-8";*/
+/* CSS Document */
+html,body{
+    height: 100%;
+    width: 100%;
+}
+body::-webkit-scrollbar{width:0px}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,
+fieldset,input,textarea,p,blockquote,th,td {
+    margin:0;
+    padding:0;
+}
+table {
+    border-collapse:collapse; /*让表格边框细线*/
+    border-spacing:0; /*清除边框间距*/
+}
+fieldset,img {
+    border:0 none; /*有些浏览器默认这些标签有边框，所以要清除默认边框*/
+    display:block;
+}
+address,caption,cite,code,dfn,em,i,u,b,strong,th,var {
+    font-style:normal;
+    font-weight:normal;
+    /*清除标签默认文本样式和加粗*/
+}
+input,textarea{
+    outline: 0 none;/*去掉文本框的默认轮廓线*/
+}
+input{
+    border: none;
+}
+ol,ul {
+    list-style:none; /*清除列表默认样式*/
+}
+caption,th {
+    text-align:left; /*清除标签默认文本居中对齐*/
+}
+h1,h2,h3,h4,h5,h6 {
+    font-size:100%;
+    font-weight:normal; /*清除标题标签的默认样式*/
+}
+a{
+    text-decoration:none;/*大部分页面中的链接没有下划线*/
+    color:#757575;
+}
+.clearfix:after{
+    height:0;
+    content:" ";
+    display:block;
+    overflow:hidden;
+    clear:both;
+}
+.clearfix{
+    zoom:1;/*IE低版本浏览器不支持after伪类所以要加这一句*/
+}
+.flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.flex-v {
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.flex-1 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.flex-align-center {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.flex-pack-center {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.flex-pack-justify {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+body { margin-right: -15px; margin-bottom: -15px; }
+@media screen and (min-width: 1000px) and (max-width: 1400px){
+   .freeSearch{
+       margin-top: 50px !important;
+   }
+    .exhibitNavbarTitle{
+        margin-top: 12px !important;
+       }
+}
+/*@media screen and (min-width: 1664px) and (max-width: 1920px){
+    
+}*/
