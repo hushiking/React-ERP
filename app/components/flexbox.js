@@ -1,7 +1,6 @@
 import React from 'react'
 import { Row, Col, Icon } from 'antd';
 
-
 class FlexBox extends React.Component {
     constructor(props, context) {
         super(props, context)
@@ -45,8 +44,6 @@ class FlexBox extends React.Component {
     }
 }
 module.exports = FlexBox
-
-
 
 const container = {
     width: '100%',

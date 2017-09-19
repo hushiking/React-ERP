@@ -42,8 +42,8 @@ class Shade extends React.Component {
         let IconScreen;
         ismaxScreen ? IconScreen = <Icon onClick={this.normalScreen} className='shadeIcon' style={{ marginRight: '2px' }} type="shrink" />
             : IconScreen = <Icon onClick={this.maxScreen} className='shadeIcon' style={{ marginRight: '2px' }} type="arrows-alt" />
-        let banClickShade 
-        this.props.banClick ? banClickShade =  <div style={banClick}></div> : <div></div>
+        let banClickShade
+        this.props.banClick ? banClickShade = <div style={banClick}></div> : <div></div>
         return (
             <div style={shadeContainer} onClick={this.closeShade}>
                 <Row id="shadeContainer" style={{ width: '100%', height: '100%' }} type="flex" justify="center" align="middle">
@@ -54,13 +54,13 @@ class Shade extends React.Component {
                             {IconScreen}
                         </div>
                         <div style={shadePropsContent}>
-                        {this.props.template}
-                        {banClickShade}
-                          
+                            {this.props.template}
+                            {banClickShade}
+
                         </div>
-                       
-                    </div>   
-                                   
+
+                    </div>
+
                 </Row>
             </div>
         )
@@ -83,7 +83,7 @@ const normalShade = {
     height: '600px',
     background: 'white',
     borderRadius: '6px',
-    boxShadow: '1px 1px 50px rgba(0,0,0,.3)',   
+    boxShadow: '1px 1px 50px rgba(0,0,0,.3)',
 }
 const maxShade = {
     marginRight: '-15px',
@@ -91,7 +91,7 @@ const maxShade = {
     height: '100%',
     background: 'white',
     borderRadius: '6px',
-   
+
 }
 const shadeTitleText = {
     paddingLeft: '24px',
@@ -101,10 +101,10 @@ const shadeTitleText = {
 }
 const shadePropsContent = {
     width: '100%',
-    height:'552px',
+    height: '552px',
     background: 'white',
     overflow: 'auto',
-    paddingTop:'42px'
+    paddingTop: '42px'
 }
 const banClick = {
     width: '46%',

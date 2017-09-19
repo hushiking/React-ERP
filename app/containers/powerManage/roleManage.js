@@ -38,24 +38,24 @@ class RuleManage extends React.Component {
     }
     getTableData = () => {
         return [
-                {
-                    key: '1',
-                    rolename: "小红",
-                    status: '0',
-                    rule_competence: []
-                },
-                {
-                    key: '2',
-                    rolename: "玲玲",
-                    status: '1',
-                    rule_competence: []
-                },
-                {
-                    key: '3',
-                    rolename: "大明",
-                    status: '1',
-                    rule_competence: []
-                }] 
+            {
+                key: '1',
+                rolename: "小红",
+                status: '0',
+                rule_competence: []
+            },
+            {
+                key: '2',
+                rolename: "玲玲",
+                status: '1',
+                rule_competence: []
+            },
+            {
+                key: '3',
+                rolename: "大明",
+                status: '1',
+                rule_competence: []
+            }]
     }
     render() {
         let roleTableData;

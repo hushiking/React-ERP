@@ -4,9 +4,7 @@ import '../../static/css/home.css'
 
 import { Layout, Menu, Icon } from 'antd'
 
-
 // 引入遮罩层
-
 const SubMenu = Menu.SubMenu
 const MenuItemGroup = Menu.ItemGroup
 const { Header, Content, Footer, Sider } = Layout
@@ -38,7 +36,7 @@ class Home extends React.Component {
     shadeTemplate = (template) => {
         this.setState({
             shadeTemplate: template
-        }); 
+        });
     }
     render() {
         return (

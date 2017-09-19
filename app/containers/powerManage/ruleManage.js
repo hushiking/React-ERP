@@ -37,37 +37,37 @@ class RuleManage extends React.Component {
     }
     getTableData = () => {
         return [
-                {
-                    key: '1',
-                    rule_url: "/index/rolemanage",
-                    rule_name: "角色管理",
-                    parent_level: "顶级",
-                    icon: "plus",
-                    additional: '加鸡腿',
-                    status: '0',
-                    isshow: '0'
-                },
-                {
-                    key: '2',
-                    rule_url: "/index/rulemanage",
-                    rule_name: "规则管理",
-                    parent_level: "顶级",
-                    icon: "plus",
-                    additional: '加鸡腿',
-                    status: '0',
-                    isshow: '0'
-                },
-                {
-                    key: '3',
-                    rule_url: "/index/manage",
-                    rule_name: "权限管理",
-                    parent_level: "顶级",
-                    icon: "plus",
-                    additional: '加蛋',
-                    status: '1',
-                    isshow: '0'
-                },
-            ] 
+            {
+                key: '1',
+                rule_url: "/index/rolemanage",
+                rule_name: "角色管理",
+                parent_level: "顶级",
+                icon: "plus",
+                additional: '加鸡腿',
+                status: '0',
+                isshow: '0'
+            },
+            {
+                key: '2',
+                rule_url: "/index/rulemanage",
+                rule_name: "规则管理",
+                parent_level: "顶级",
+                icon: "plus",
+                additional: '加鸡腿',
+                status: '0',
+                isshow: '0'
+            },
+            {
+                key: '3',
+                rule_url: "/index/manage",
+                rule_name: "权限管理",
+                parent_level: "顶级",
+                icon: "plus",
+                additional: '加蛋',
+                status: '1',
+                isshow: '0'
+            },
+        ]
     }
     render() {
         let roleTableData;
@@ -99,7 +99,7 @@ class RuleManage extends React.Component {
         )
     }
 }
-module.exports = RuleManage 
+module.exports = RuleManage
 const felxContent = {
     width: '100%',
     background: 'white',

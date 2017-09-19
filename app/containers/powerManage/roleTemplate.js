@@ -2,7 +2,7 @@ import React from 'react'
 import { Form, Input, Tooltip, Icon, Cascader, Select, Row, Col, Checkbox, Button, Radio } from 'antd';
 import PropTypes from 'prop-types';
 // 引入树形组件
-import ManageTree from '../../components/manageTree' 
+import ManageTree from '../../components/manageTree'
 
 
 const FormItem = Form.Item;
@@ -29,7 +29,7 @@ class RoleTemplate extends React.Component {
         e.preventDefault();
         this.props.form.validateFieldsAndScroll((err, values) => {
             if (!err) {
-                 console.log(values)
+                console.log(values)
                 this.context.getFormVal(values)
             }
         });
@@ -82,25 +82,25 @@ class RoleTemplate extends React.Component {
                     {...formItemLayout}
                     label="状态"
                 >
-                    {getFieldDecorator('status',{
-                         rules: [{ required: true, message: 'Please choose the status' }],
-                         initialValue: this.state.renderObj.status || '0'
+                    {getFieldDecorator('status', {
+                        rules: [{ required: true, message: 'Please choose the status' }],
+                        initialValue: this.state.renderObj.status || '0'
                     })(
                         <RadioGroup >
                             <Radio value="0" >无效</Radio>
                             <Radio value="1">有效</Radio>
                         </RadioGroup>
-                    )}
+                        )}
                 </FormItem>
-               <FormItem
+                <FormItem
                     {...formItemLayout}
                     label="权限规则"
                 >
                     {getFieldDecorator('rule_competence')(
-                        <ManageTree/>
+                        <ManageTree />
                     )}
                 </FormItem>
-                
+
 
                 <FormItem {...tailFormItemLayout} style={{ marginTop: '70px' }}>
                     <Button type="primary" htmlType="submit">提交</Button>

@@ -1,65 +1,90 @@
 /*调整分页靠右的距离  */
-.ant-table-pagination{
+
+.ant-table-pagination {
     margin-right: 25px;
 }
-.ant-pagination-item-active{
+
+.ant-pagination-item-active {
     background: #fdb241;
-    border-color: #fdb241 ;
-}
-.ant-pagination-item-active:hover, .ant-pagination-item-active:focus, .ant-pagination-item-active:active, .ant-pagination-item-active.active{
-    background: #fdb241;
-    border-color: #fdb241 ;   
+    border-color: #fdb241;
 }
 
-.ant-checkbox-checked .ant-checkbox-inner, .ant-checkbox-indeterminate .ant-checkbox-inner{
+.ant-pagination-item-active:hover,
+.ant-pagination-item-active:focus,
+.ant-pagination-item-active:active,
+.ant-pagination-item-active.active {
     background: #fdb241;
-    border-color: #fdb241 ;  
+    border-color: #fdb241;
 }
-.btnSearch{
+
+.ant-checkbox-checked .ant-checkbox-inner,
+.ant-checkbox-indeterminate .ant-checkbox-inner {
+    background: #fdb241;
+    border-color: #fdb241;
+}
+
+.btnSearch {
     background: #c3a279;
     color: white;
-    border:none;
+    border: none;
 }
-.ant-btn-primary{
+
+.ant-btn-primary {
     background: #fdb241;
-    border-color: #fdb241 ; 
+    border-color: #fdb241;
 }
-.ant-btn-primary:hover, .ant-btn-primary:focus, .ant-btn-primary:active, .ant-btn-primary.active{
+
+.ant-btn-primary:hover,
+.ant-btn-primary:focus,
+.ant-btn-primary:active,
+.ant-btn-primary.active {
     background: #ff973b;
-    border-color: #ff973b ; 
+    border-color: #ff973b;
 }
 
-
-.ant-menu-dark .ant-menu-inline.ant-menu-sub{
+.ant-menu-dark .ant-menu-inline.ant-menu-sub {
     background: #575048;
 }
-.btnSearch:hover, .btnSearch:focus, .btnSearch:active, .btnSearch.active{
+
+.btnSearch:hover,
+.btnSearch:focus,
+.btnSearch:active,
+.btnSearch.active {
     background: #ba8e6e;
     color: white;
-    border:none;    
+    border: none;
 }
-.btnNew{
+
+.btnNew {
     background: #fdb241;
     color: white;
-    border:none;
+    border: none;
 }
 
-.btnNew:hover, .btnNew:focus, .btnNew:active, .btnNew.active{
+.btnNew:hover,
+.btnNew:focus,
+.btnNew:active,
+.btnNew.active {
     background: #ff973b;
     color: white;
-    border:none;    
-}
-.btnDle{
-    background: #eb6c4b;
-    color: white;
-    border:none;
+    border: none;
 }
 
-.btnDle:hover, .btnDle:focus, .btnDle:active, .btnDle.active{
+.btnDle {
+    background: #eb6c4b;
+    color: white;
+    border: none;
+}
+
+.btnDle:hover,
+.btnDle:focus,
+.btnDle:active,
+.btnDle.active {
     background: #e74f3f;
     color: white;
-    border:none;    
+    border: none;
 }
+
 .shadeIcon {
     width: 24px;
     height: 24px;
@@ -69,12 +94,18 @@
     font-weight: 700;
     margin-top: 12px;
     margin-right: 10px;
-    cursor:pointer;
-}
-.shadeIcon:hover{
-    color: #f2f3f5;
-     font: 18px '微软雅黑';
+    cursor: pointer;
 }
 
-textarea::-webkit-scrollbar {display:none}
-div::-webkit-scrollbar {display:none}
+.shadeIcon:hover {
+    color: #f2f3f5;
+    font: 18px '微软雅黑';
+}
+
+textarea::-webkit-scrollbar {
+    display: none
+}
+
+div::-webkit-scrollbar {
+    display: none
+}

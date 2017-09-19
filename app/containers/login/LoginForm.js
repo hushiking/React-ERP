@@ -22,27 +22,27 @@ class LoginForm extends React.Component {
         console.log(newState);
         this.setState(newState);
     }
-    isSubmit = () =>{
+    isSubmit = () => {
         let postData = {
-            username : this.state.username,
-            password : this.state.password,
+            username: this.state.username,
+            password: this.state.password,
         }
-        if(postData.username.length<1){
-            this.setState({ hint: '用户姓名不能为空'});
+        if (postData.username.length < 1) {
+            this.setState({ hint: '用户姓名不能为空' });
             setTimeout(() => {
-                this.setState({ hint: ''});
-            }, 3000);
+                this.setState({ hint: '' });
+            }, 500);
             return
         }
-        if(postData.password.length<1){
-            this.setState({ hint: '密码不能为空'});
+        if (postData.password.length < 1) {
+            this.setState({ hint: '密码不能为空' });
             setTimeout(() => {
-                this.setState({ hint: ''});
-            }, 3000);
+                this.setState({ hint: '' });
+            }, 500);
             return
         }
         console.log('可以去登录页了');
-        this.context.router.push('/home');  
+        this.context.router.push('/home');
     }
     handleSignup(e) {
         e.preventDefault()
@@ -54,9 +54,9 @@ class LoginForm extends React.Component {
                 <div className="loginContent">
                     <div className="loginTitle">{this.state.title}</div>
                     <div className="loginText">登&nbsp;录</div>
-                    <input value={ this.state.username } onChange={ this.handleChange }  name="username" className="loginaccount" type="text"></input>
-                    <input value={ this.state.password } onChange={ this.handleChange } name="password" className="loginPassword" type="text"></input>
-                    <div   className="loginBtn" onClick={this.isSubmit}>登录</div>
+                    <input value={this.state.username} onChange={this.handleChange} name="username" className="loginaccount" type="text"></input>
+                    <input value={this.state.password} onChange={this.handleChange} name="password" className="loginPassword" type="text"></input>
+                    <div className="loginBtn" onClick={this.isSubmit}>登录</div>
                     <div className="testHint">{this.state.hint}</div>
                 </div>
             </div>

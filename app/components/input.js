@@ -1,7 +1,6 @@
 
 import React from 'react'
-import { Row, Col,Input } from 'antd';
-
+import { Row, Col, Input } from 'antd';
 
 class InputCom extends React.Component {
     constructor(props, context) {
@@ -20,10 +19,10 @@ class InputCom extends React.Component {
     }
     render() {
         return (
-            <Row gutter={0} type="flex" justify="center" align="middle" style={{height:'48px'}}>
-                <Col span={12}><span style={{display:'inline-block',width:'100%',textAlign:'center',fontSize:'14px',color:'#929aab'}}>{this.props.label}</span></Col>
+            <Row gutter={0} type="flex" justify="center" align="middle" style={{ height: '48px' }}>
+                <Col span={12}><span style={{ display: 'inline-block', width: '100%', textAlign: 'center', fontSize: '14px', color: '#929aab' }}>{this.props.label}</span></Col>
                 <Col span={12} >
-                   <Input placeholder={this.props.placeInput} />
+                    <Input placeholder={this.props.placeInput} />
                 </Col>
             </Row>
 

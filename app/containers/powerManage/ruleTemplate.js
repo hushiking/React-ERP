@@ -1,5 +1,5 @@
 import React from 'react'
-import {   Form, Input, Tooltip, Icon, Cascader, Select, Row, Col, Checkbox, Button, Radio  } from 'antd';
+import { Form, Input, Tooltip, Icon, Cascader, Select, Row, Col, Checkbox, Button, Radio } from 'antd';
 const FormItem = Form.Item;
 const Option = Select.Option;
 // 单选组件
@@ -13,18 +13,18 @@ class RuleTemplate extends React.Component {
     }
 
     static contextTypes = {
-         getFormVal : PropTypes.func,
-         renderObj: PropTypes.object
+        getFormVal: PropTypes.func,
+        renderObj: PropTypes.object
     }
     state = {
         confirmDirty: false,
         autoCompleteResult: [],
-        renderObj : this.context.renderObj
+        renderObj: this.context.renderObj
     };
-      
+
 
     handleSubmit = (e) => {
-        e.preventDefault(); 
+        e.preventDefault();
         this.props.form.validateFieldsAndScroll((err, values) => {
             if (!err) {
                 this.context.getFormVal(values)
@@ -86,7 +86,7 @@ class RuleTemplate extends React.Component {
         ));
 
         return (
-         
+
             <Form onSubmit={this.handleSubmit}>
                 <FormItem
                     {...formItemLayout}
@@ -94,13 +94,13 @@ class RuleTemplate extends React.Component {
                     hasFeedback
                 >
                     {getFieldDecorator('rule_name', {
-                        rules: [{ required: true, message: 'Please input your rule_name!'}],
-                        initialValue:this.state.renderObj.rule_name || ''
+                        rules: [{ required: true, message: 'Please input your rule_name!' }],
+                        initialValue: this.state.renderObj.rule_name || ''
                     })(
                         <Input />
                         )}
                 </FormItem>
-                  <FormItem
+                <FormItem
                     {...formItemLayout}
                     label={(
                         <span>
@@ -114,18 +114,19 @@ class RuleTemplate extends React.Component {
                 >
                     {getFieldDecorator('rule_url', {
                         rules: [{ required: true, message: 'Please input your rule_url!', whitespace: true }]
-                        ,initialValue:this.state.renderObj.rule_url || ''})(
+                        , initialValue: this.state.renderObj.rule_url || ''
+                    })(
                         <Input />
                         )}
                 </FormItem>
-                 <FormItem
+                <FormItem
                     {...formItemLayout}
                     label='附加条件'
                     hasFeedback
                 >
                     {getFieldDecorator('additional', {
-                        rules: [{ required: true, message: 'Please input your additional!'}],
-                        initialValue:this.state.renderObj.additional || ''
+                        rules: [{ required: true, message: 'Please input your additional!' }],
+                        initialValue: this.state.renderObj.additional || ''
                     })(
                         <Input />
                         )}
@@ -138,43 +139,43 @@ class RuleTemplate extends React.Component {
                     {getFieldDecorator('parent_level', {
                         rules: [
                             { required: true, message: 'Please select your parent level!' },
-                        ],initialValue:this.state.renderObj.parent_level || ''
+                        ], initialValue: this.state.renderObj.parent_level || ''
                     })(
                         <Select placeholder="Please select a country">
-                        {parentsArr.map((item,  index)=>{
-                          return (  <Option key={index} value= {item} >{item}</Option>)
-                        })
-                        }
+                            {parentsArr.map((item, index) => {
+                                return (<Option key={index} value={item} >{item}</Option>)
+                            })
+                            }
                         </Select>
                         )}
                 </FormItem>
-                  <FormItem
+                <FormItem
                     {...formItemLayout}
                     label="状态"
                 >
-                    {getFieldDecorator('status',{
-                         rules: [{ required: true, message: 'Please choose the status' }],
-                         initialValue: this.state.renderObj.status || '0'
+                    {getFieldDecorator('status', {
+                        rules: [{ required: true, message: 'Please choose the status' }],
+                        initialValue: this.state.renderObj.status || '0'
                     })(
                         <RadioGroup >
                             <Radio value="0" >无效</Radio>
                             <Radio value="1">有效</Radio>
                         </RadioGroup>
-                    )}
+                        )}
                 </FormItem>
-                  <FormItem
+                <FormItem
                     {...formItemLayout}
                     label="显示"
                 >
-                    {getFieldDecorator('isshow',{
-                         rules: [{ required: true, message: 'Please decide it what is  waited to choose' }],
-                         initialValue: this.state.renderObj.isshow || '0'
+                    {getFieldDecorator('isshow', {
+                        rules: [{ required: true, message: 'Please decide it what is  waited to choose' }],
+                        initialValue: this.state.renderObj.isshow || '0'
                     })(
                         <RadioGroup >
                             <Radio value="0" >显示</Radio>
                             <Radio value="1">不显示</Radio>
                         </RadioGroup>
-                    )}
+                        )}
                 </FormItem>
 
                 <FormItem
@@ -183,13 +184,13 @@ class RuleTemplate extends React.Component {
                     hasFeedback
                 >
                     {getFieldDecorator('icon', {
-                        rules: [{ required: true, message: 'Please input your icon!'}],
-                        initialValue:this.state.renderObj.icon || ''
+                        rules: [{ required: true, message: 'Please input your icon!' }],
+                        initialValue: this.state.renderObj.icon || ''
                     })(
                         <Input />
                         )}
                 </FormItem>
-                <FormItem {...tailFormItemLayout} style={{marginTop:'70px'}}>
+                <FormItem {...tailFormItemLayout} style={{ marginTop: '70px' }}>
                     <Button type="primary" htmlType="submit">提交</Button>
                 </FormItem>
             </Form>

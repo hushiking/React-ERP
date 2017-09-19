@@ -11,20 +11,20 @@ class Tables extends React.Component {
         tableTitle: this.props.tableTitle,
         keys: this.props.keys,
         shadeStatues: false,
-        editItem : -1
+        editItem: -1
     };
     componentWillReceiveProps(nextProps) {
         console.log('props改变了')
         if (nextProps.formObj !== this.props.formObj) {
             let { data } = this.state;
             console.log(this.state.editItem);
-            if(this.state.editItem === -1){
-               let lastKey = data.length - 1 >= 0 ? Number((data[data.length - 1])['key']) + 1 : 1;
+            if (this.state.editItem === -1) {
+                let lastKey = data.length - 1 >= 0 ? Number((data[data.length - 1])['key']) + 1 : 1;
                 nextProps.formObj['key'] = lastKey;
-                data.push(nextProps.formObj) 
-            }else{
+                data.push(nextProps.formObj)
+            } else {
                 let currKey = data[this.state.editItem]['key'];
-                nextProps.formObj['key'] =  currKey ;
+                nextProps.formObj['key'] = currKey;
                 data[this.state.editItem] = nextProps.formObj
             }
             this.setState({ data: data })
@@ -85,25 +85,25 @@ class Tables extends React.Component {
         });
     }
     addShade = () => {
-        this.props.renderObject({});   
+        this.props.renderObject({});
         this.setState({
             shadeStatues: !this.state.shadeStatues,
-            editItem : -1,
+            editItem: -1,
             banClick: false
         });
     }
-    editShade = (index) => {        
-        let formSelectObj =  this.state.data[index];
+    editShade = (index) => {
+        let formSelectObj = this.state.data[index];
         this.props.renderObject(formSelectObj);
         this.setState({
             shadeStatues: !this.state.shadeStatues,
-            editItem : index,
+            editItem: index,
             banClick: false
         });
     }
     viewShade = (index) => {
-        let formSelectObj =  this.state.data[index] ;
-        this.props.renderObject(formSelectObj);    
+        let formSelectObj = this.state.data[index];
+        this.props.renderObject(formSelectObj);
         this.setState({
             shadeStatues: !this.state.shadeStatues,
             banClick: true
@@ -134,7 +134,7 @@ class Tables extends React.Component {
     render() {
         let { shadeStatues } = this.state;
         let shadeEle;
-        shadeStatues ? shadeEle = <ShadePage banClick = {this.state.banClick}  shadeChange={this.shadeStatuesAction} template={this.props.template} /> : shadeEle = <div></div>
+        shadeStatues ? shadeEle = <ShadePage banClick={this.state.banClick} shadeChange={this.shadeStatuesAction} template={this.props.template} /> : shadeEle = <div></div>
         let { sortedInfo, selectedRowKeys, data } = this.state;
         sortedInfo = sortedInfo || {};
         const rowSelection = {
@@ -208,11 +208,9 @@ class Tables extends React.Component {
                     <Button className='btnDle' style={{ marginLeft: '15px' }} icon="delete" onClick={this.delCouple.bind(this)}>删除</Button>
                 </div>
                 <Table style={{ background: 'white' }} columns={columns} rowSelection={rowSelection} dataSource={this.state.data} onChange={this.handleChange} />
-                {shadeEle} 
+                {shadeEle}
             </div>
         );
     }
 }
 module.exports = Tables
-
-
